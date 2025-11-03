@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- Referencia CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet"> <!-- Referencia fonte do Google -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"> <!-- Referencia do ícone do Bootstrap -->
+    <title>IZZY - Assitente de Estudos</title>
+</head>
+<body>
+    
+    <!-- Títulos -->
+    <h1>IZZY</h1>
+    <h2>Assistente de Estudos</h2>
+
+    <!-- Texto inicial quando não há dúvidas salvas -->
+    <h3 class="espaco-h3" id="texto-fundo">Você ainda não possui dúvidas salvas!</h3>
+
+    <!-- Botão criar nova dúvida -->
+    <div class="botao-container">
+        <p class="texto-btn">Criar nova dúvida</p>
+        <button class="icon-btn" id="btn-criar-duvida">
+            <i class="bi bi-journal-plus"></i>
+        </button>
+    </div>
+
+    <!-- Modal para criar nova dúvida -->
+    <div id="modal-duvida" class="modal">
+        <div class="modal-conteudo">
+            <h3>Criar Nova Dúvida</h3>
+
+            <!-- Seleção da matéria -->
+            <label for="materia">Matéria:</label>
+            <select id="materia">
+                <option value="">Selecione a matéria</option>
+                <option value="Matemática">Matemática</option>
+                <option value="Português">Português</option>
+                <option value="Ciências">Ciências</option>
+                <option value="História">História</option>
+                <option value="Geografia">Geografia</option>
+                <option value="Biologia">Biologia</option>
+                <option value="Quimica">Química</option>
+                <option value="Fisica">Física</option>
+                <option value="Sociologia">Sociologia</option>
+                <option value="Filosofia">Filosofia</option>
+                <option value="Inglês">Inglês</option>
+            </select>
+
+            <!-- Campo de detalhes da dúvida -->
+            <label for="detalhes">Conteúdo</label>
+            <textarea id="detalhes" placeholder="Digite sua dúvida"></textarea>
+
+            <!-- Botões Enviar e Voltar -->
+            <div class="modal-botoes">
+                <button id="btn-enviar">Enviar</button>
+                <button id="btn-voltar">Voltar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Local onde dúvidas salvas serão exibidas -->
+    <div id="duvidas-salvas"></div>
+
+    <!-- Referência do JavaScript -->
+    <script src="app.js"></script>
+
+</body>
+</html>
